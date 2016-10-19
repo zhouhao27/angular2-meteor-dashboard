@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import template from './timeline.component.html';
-import * as style from './timeline.component.scss';
+// import * as style from './timeline.component.scss';
 
 @Component({
 	// moduleId: module.id,
