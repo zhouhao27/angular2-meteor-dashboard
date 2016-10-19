@@ -11,6 +11,12 @@ Since Meteor v1.4 you can use one command to create a working Angular2 app based
 meteor create --example angular2-boilerplate
 ```
 
+### Install jquery
+
+> meteor add jquery
+
+But it doesn't work. $ not found
+
 ## NPM Scripts
 
 This boilerplate comes with predefined NPM scripts, defined in `package.json`:
@@ -75,6 +81,15 @@ All other test files are located near the component/service it tests, with the `
 
 The `DemoComponent` contains example for Angular 2 tests for Component, and in the server side there is an example for testing Meteor collections and stub data.
 
+## References
+
+[SB Admin BS 4 Angular2](http://startangular.com/product/sb-admin-bootstrap-4-angular-2/)
+
 ## Todo
 
 - [ngClass] doesn't work in a few places
+- index.ts standardize 
+- Chart doesn't work because $ not found
+- Not use jquery if possible
+- To use npm to install bootstrap4
+- Separate the style to different files
