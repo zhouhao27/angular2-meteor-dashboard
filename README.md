@@ -84,6 +84,7 @@ The `DemoComponent` contains example for Angular 2 tests for Component, and in t
 ## References
 
 [SB Admin BS 4 Angular2](http://startangular.com/product/sb-admin-bootstrap-4-angular-2/)
+[Meteor Angular 2 Socially](https://github.com/Urigo/meteor-angular2.0-socially)
 
 ## Todo
 

@@ -22,9 +22,10 @@ export class TopNavComponent {
 	}
 
 	sidebarToggler(): void  {
-		var sidebar: any = $('#sidebar');
-		var mainContainer: any = $('.main-container');
-		sidebar.toggleClass('sidebar-left-zero');
-		mainContainer.toggleClass('main-container-ml-zero');
+		alert('toggle');
+		// var sidebar: any = $('#sidebar');
+		// var mainContainer: any = $('.main-container');
+		// sidebar.toggleClass('sidebar-left-zero');
+		// mainContainer.toggleClass('main-container-ml-zero');
 	}
 }

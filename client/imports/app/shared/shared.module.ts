@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
+import { DropdownModule } from 'ng2-bootstrap/ng2-bootstrap';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { TopNavComponent } from './topnav/topnav.component';
 
@@ -10,7 +11,8 @@ import { TopNavComponent } from './topnav/topnav.component';
   imports: [
     RouterModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    DropdownModule
   ],
   declarations: [
     SidebarComponent,
