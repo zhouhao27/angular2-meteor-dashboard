@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { AccountModule } from './account/account.module';
+import { DashboardModule } from './dashboard';
 
 import { routes } from './app.routes';
 
@@ -23,7 +24,8 @@ import { routes } from './app.routes';
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    AccountModule	
+    AccountModule,
+    DashboardModule
   ],
   // Main Component
   bootstrap: [ AppComponent ]

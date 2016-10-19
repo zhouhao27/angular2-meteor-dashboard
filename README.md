@@ -1,6 +1,9 @@
-# Angular2-Meteor-Base Tutorial
+# Dashboard 
 
-## Usage
+- Angular 2 as front end
+- Meteor as backend
+
+## Creation
 
 Since Meteor v1.4 you can use one command to create a working Angular2 app based on this boilerplate:
 
@@ -71,3 +74,7 @@ There is a main test file that initialize Angular 2 tests library, it located un
 All other test files are located near the component/service it tests, with the `.test.ts` extension.
 
 The `DemoComponent` contains example for Angular 2 tests for Component, and in the server side there is an example for testing Meteor collections and stub data.
+
+## Todo
+
+- [ngClass] doesn't work in a few places
