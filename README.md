@@ -100,7 +100,6 @@ The `DemoComponent` contains example for Angular 2 tests for Component, and in t
 ## Todo
 
 - index.ts standardize 
-- Chart doesn't work because $ not found
 - Not use jquery if possible
 - To use npm to install bootstrap4
 - Separate the style to different files

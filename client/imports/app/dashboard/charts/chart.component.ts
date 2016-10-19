@@ -1,8 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import template from './chart.component.html';
 
-declare var $:any;
-
 @Component({
   // moduleId: module.id,
 	selector: 'chart-component',
