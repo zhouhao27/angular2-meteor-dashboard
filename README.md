@@ -1,7 +1,7 @@
 # Dashboard 
 
 - Angular 2 as front end
-- Meteor as backend
+- Meteor as backend (ready for use, but nothing implemented yet)
 
 ## Creation
 
@@ -37,13 +37,6 @@ This package contains:
 - SASS support
 - Testing framework with Mocha and Chai
 
-This application also contains demo code:
-
-- Main Component (`/client/app.component`)
-- Demo Child Component (`/client/imports/demo/demo.component`)
-- Demo Service (`/client/imports/demo/demo-data.service`)
-- Demo Mongo Collection (`/both/demo.collection.ts`) with a TypeScript interface as model.
-
 The Main component loads the child component, which uses the demo service that gets it's data from the demo collection.
 
 ## Folder Structure
@@ -59,7 +52,6 @@ The main component uses HTML template and SASS file.
 The `index.html` file is the main HTML which loads the application by using the main component selector (`<app>`).
 
 All the other client files are under `client/imports` and organized by the context of the components (in our example, the context is `demo`).
-
 
 #### Server
 
@@ -84,13 +76,14 @@ The `DemoComponent` contains example for Angular 2 tests for Component, and in t
 ## References
 
 [SB Admin BS 4 Angular2](http://startangular.com/product/sb-admin-bootstrap-4-angular-2/)
+
 [Meteor Angular 2 Socially](https://github.com/Urigo/meteor-angular2.0-socially)
 
 ## Todo
 
-- [ngClass] doesn't work in a few places
 - index.ts standardize 
 - Chart doesn't work because $ not found
 - Not use jquery if possible
 - To use npm to install bootstrap4
 - Separate the style to different files
+- sidebar toggle icon not shown and not working
