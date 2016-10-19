@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 
 import { DashboardComponent } from './dashboard.component';
 import { HomeModule } from './home';
-import { ChartModule } from './charts/chart.module';
+import { MyChartModule } from './charts/chart.module';
 import { SharedModule } from '../shared';
 import { BlankPageModule } from './blank-page/blank-page.module';
 import { FormModule } from './forms/forms.module';
@@ -19,7 +19,7 @@ import { ComponentModule } from './component/component.module'
     CommonModule,
     SharedModule,
     HomeModule,
-    ChartModule,
+    MyChartModule,
     BlankPageModule,
     FormModule,
     TableModule,

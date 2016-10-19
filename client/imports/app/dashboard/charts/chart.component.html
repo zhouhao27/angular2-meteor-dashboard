@@ -19,24 +19,28 @@
     <div class="row">
         <div class="col-xl-6">
             <div class="card card-block">
-                <div id="container" style="min-width: 310px; height: 400px; max-width: 800px; margin: 0 auto"></div>
+                <chart [options]="options" style="min-width: 310px; height: 400px; max-width: 800px; margin: 0 auto"></chart>
             </div>
         </div>
+        
         <div class="col-xl-6">
             <div class="card card-block">
-                <div id="area-chart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                <chart [options]="areaChartOptions" style="min-width: 310px; height: 400px; margin: 0 auto"></chart>
             </div>
         </div>
+        
         <h1>&nbsp;</h1>
         <div class="col-xl-6">
             <div class="card card-block">
-                <div id="total-fruit" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                <chart [options] ="totalFruitOptions" style="min-width: 310px; height: 400px; margin: 0 auto"></chart>
             </div>
         </div>
+    
         <div class="col-xl-6">
             <div class="card card-block">
-                <div id="snow-depth" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                <chart [options]="snowDepthOptions" style="min-width: 310px; height: 400px; margin: 0 auto"></chart>
             </div>
         </div>
+        
     </div>
 </div>

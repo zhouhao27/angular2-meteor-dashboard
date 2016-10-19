@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import template from './topnav.component.html';
 
+declare var $:any;
+
 @Component({
   // moduleId: module.id,
   selector: 'topnav-component',

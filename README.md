@@ -11,11 +11,29 @@ Since Meteor v1.4 you can use one command to create a working Angular2 app based
 meteor create --example angular2-boilerplate
 ```
 
-### Install jquery
+### Dependecies
+
+- ng2-bootstrap
+
+> meteor npm i ng2-bootstrap --save
+
+- bootstrap4
+
+> meteor npm install --save bootstrap@4.0.0-alpha.4
+
+- jquery
 
 > meteor add jquery
 
-But it doesn't work. $ not found
+> typings install dt~jquery --global --save
+
+- highcharts
+
+> meteor npm install angular2-highcharts --save
+
+- fontawesome
+
+> meteor add fortawesome:fontawesome
 
 ## NPM Scripts
 
