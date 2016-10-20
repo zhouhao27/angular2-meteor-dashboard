@@ -13,7 +13,6 @@ export class PasswordValidator {
     }
 
     if (password != repeat) {
-      console.log(group);
       return { passwordsShouldMatch: true };
     }
 

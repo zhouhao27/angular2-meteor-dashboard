@@ -5,11 +5,13 @@ import { Router } from '@angular/router';
 
 import { EmailValidator } from './email.validator';
 import template from './login.component.html';
+import style from './account.component.scss';
 
 @Component({
 	// moduleId: module.id,
 	selector: 'login-component',
-	template
+	template,
+	styles: [style]
 })
 
 export class LoginComponent implements OnInit { 

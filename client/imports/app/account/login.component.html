@@ -8,7 +8,7 @@
 					<div class="form-group">
 						<div 
 							class="error-label"
-							*ngIf="loginForm.controls.email.dirty">
+							*ngIf="loginForm.controls.email.dirty || loginForm.controls.email.touched">
 							<div 
 								*ngIf="loginForm.controls.email.errors?.required">
 								Email address required!
@@ -24,7 +24,7 @@
 					</div>
 
 					<div class="form-group">
-						<div class="error-label" *ngIf="loginForm.controls.password.dirty">
+						<div class="error-label" *ngIf="loginForm.controls.password.dirty || loginForm.controls.password.touched">
 							<div 								
 								*ngIf="loginForm.controls.password.errors?.required">
 								Password required

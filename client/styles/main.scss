@@ -169,6 +169,8 @@ a:hover{
         overflow-x: hidden;
     position: relative;
 }
+
+/*
 .chat-panel{
     .chat-dropdown{
         margin-top: -3px;
@@ -202,6 +204,8 @@ a:hover{
         }
     }
 }
+*/
+
 /* RTL ashboard */
 .sidebarPushRight{
     left: 225px !important;
@@ -296,6 +300,7 @@ a:hover{
     }
 }
 
+/*
 .login-page {
     position: absolute;
     top: 0;
@@ -361,11 +366,11 @@ a:hover{
         color: rgba(255,255,255,0.6) !important;
         }
          
-        input:-moz-placeholder { /* Firefox 18- */
+        input:-moz-placeholder { // Firefox 18- 
         color: rgba(255,255,255,0.6) !important;  
         }
          
-        input::-moz-placeholder {  /* Firefox 19+ */
+        input::-moz-placeholder {  // Firefox 19+ 
         color: rgba(255,255,255,0.6) !important;  
         }
          
@@ -377,6 +382,8 @@ a:hover{
         padding: 40px 0;
     }
 }
+*/
+
 .nested-menu {
     .list-group-item {
         cursor: pointer;
@@ -447,8 +454,6 @@ a:hover{
     }
 }
 
-@import "../imports/app/account/account.component.scss";
-@import "../imports/app/dashboard/home/timeline.component.scss";
 // @import "{}/node_modules/bootstrap/scss/bootstrap.scss";
 
 @import "./bootstrap/bootstrap.scss";

@@ -5,11 +5,13 @@ import { Accounts } from 'meteor/accounts-base';
 import { PasswordValidator } from './password.validator';
 import { EmailValidator } from './email.validator';
 import template from './register.component.html';
+import style from './account.component.scss';
 
 @Component({
 	// moduleId: module.id,
 	selector: 'register-component',
-	template
+	template,
+	styles: [style]
 })
 
 export class RegisterComponent implements OnInit {

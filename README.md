@@ -105,5 +105,4 @@ The `DemoComponent` contains example for Angular 2 tests for Component, and in t
 - index.ts standardize 
 - Not use jquery if possible
 - To use npm to install bootstrap4
-- Separate the style to different files
 - sidebar toggle icon not shown and not working
