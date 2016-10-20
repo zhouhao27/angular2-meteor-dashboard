@@ -5,9 +5,9 @@ import { LoginComponent, RegisterComponent } from './';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
  
 @NgModule({
-    // imports: [CommonModule, RouterModule],
     imports: [
         RouterModule,
+        CommonModule,
         FormsModule,
     	ReactiveFormsModule
     ],

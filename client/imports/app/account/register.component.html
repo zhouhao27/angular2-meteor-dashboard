@@ -6,6 +6,20 @@
 			<form role="form" [formGroup]="registerForm" (ngSubmit)="register()">
 				<div class="form-content">
 					<div class="form-group">
+						<div 
+							class="error-label"
+							*ngIf="registerForm.controls.name.dirty || registerForm.controls.name.touched">
+							<div 
+								*ngIf="registerForm.controls.name.errors?.required">
+								User name required!
+							</div>
+							<div *ngIf="registerForm.controls.name.errors?.minlength">
+								User name should at least {{ registerForm.controls.name.errors.minlength.requiredLength }} characters.
+							</div>
+							<div *ngIf="registerForm.controls.name.errors?.maxlength">
+								User name should at most {{ registerForm.controls.name.errors.maxlength.requiredLength }} characters.
+							</div>
+						</div>
 						<input type="text" 
 							class="form-control input-underline input-lg" 
 							id="" placeholder="Full Name"
@@ -13,6 +27,17 @@
 					</div>
 
 					<div class="form-group">
+						<div 
+							class="error-label"
+							*ngIf="registerForm.controls.email.dirty || registerForm.controls.email.touched">
+							<div 
+								*ngIf="registerForm.controls.email.errors?.required">
+								Email address required!
+							</div>
+							<div *ngIf="registerForm.controls.email.errors?.incorrectFormat">
+								Email address is invalid!
+							</div>
+						</div>
 						<input type="text" 
 							class="form-control input-underline input-lg" 
 							id="" placeholder="Email"
@@ -20,20 +45,35 @@
 					</div>
 
 					<div class="form-group">
+						<div class="error-label" *ngIf="registerForm.controls.password.dirty || registerForm.controls.password.touched">
+							<div 								
+								*ngIf="registerForm.controls.password.errors?.required">
+								Password required
+							</div>						
+							<div *ngIf="registerForm.controls.password.errors?.minlength">
+								Password should at least {{ registerForm.controls.password.errors.minlength.requiredLength }} characters.
+							</div>
+						</div>
 						<input type="password" 
 							class="form-control input-underline input-lg" 
 							id="" placeholder="Password"
 							formControlName="password">
 					</div>
 					<div class="form-group">
+
+						<div class="error-label" *ngIf="registerForm.controls.repeat.dirty || registerForm.controls.repeat.touched">
+							<div								
+								*ngIf="registerForm.errors?.passwordsShouldMatch">
+								Password doesn't match!
+							</div>
+						</div>
 						<input type="password" 
 							class="form-control input-underline input-lg" 
 							id="" placeholder="Repeat Password"
 							formControlName="repeat">
 					</div>
 				</div>
-				<button type="submit" class="btn rounded-btn"> Register </button>
-				<!--<a type="submit" class="btn rounded-btn" routerLink="/dashboard/home"> Register </a>&nbsp;-->
+				<button type="submit" class="btn rounded-btn" [disabled]="!registerForm.valid"> Register </button>			
 				<a class="btn rounded-btn" routerLink="/"> Log in </a>
 			</form>
 		</div>	

@@ -99,6 +99,9 @@ The `DemoComponent` contains example for Angular 2 tests for Component, and in t
 
 ## Todo
 
+- Consider whether to validate the email's uniqueness
+- Password new validation 
+- Login activity indicator during login
 - index.ts standardize 
 - Not use jquery if possible
 - To use npm to install bootstrap4

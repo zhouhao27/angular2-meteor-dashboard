@@ -1,7 +1,9 @@
 import { Component , OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import {  Accounts } from 'meteor/accounts-base';
+import { Accounts } from 'meteor/accounts-base';
 
+import { PasswordValidator } from './password.validator';
+import { EmailValidator } from './email.validator';
 import template from './register.component.html';
 
 @Component({
@@ -19,11 +21,17 @@ export class RegisterComponent implements OnInit {
 	// style
 	ngOnInit() {
 		this.registerForm = this.formBuilder.group({
-			name: ['',Validators.required],
-			email: ['',Validators.required],
-			password: ['',Validators.required],
+			name: ['',
+				[Validators.required, Validators.minLength(5), Validators.maxLength(20)]
+			],
+			email: ['',
+				[Validators.required, EmailValidator.validFormat]
+			],
+			password: ['',
+				[Validators.required, Validators.minLength(5)]
+			],
 			repeat: ['']
-		})
+		},{validator: PasswordValidator.passwordMatch})
 	}
 
 	register() {

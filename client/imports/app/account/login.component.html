@@ -6,6 +6,17 @@
 			<form role="form" [formGroup]="loginForm" (ngSubmit)="login()">
 				<div class="form-content">
 					<div class="form-group">
+						<div 
+							class="error-label"
+							*ngIf="loginForm.controls.email.dirty">
+							<div 
+								*ngIf="loginForm.controls.email.errors?.required">
+								Email address required!
+							</div>
+							<div *ngIf="loginForm.controls.email.errors?.incorrectFormat">
+								Email address is invalid!
+							</div>
+						</div>
 						<input type="text" 
 							class="form-control input-underline input-lg" 
 							id="" placeholder="Email"
@@ -13,14 +24,28 @@
 					</div>
 
 					<div class="form-group">
+						<div class="error-label" *ngIf="loginForm.controls.password.dirty">
+							<div 								
+								*ngIf="loginForm.controls.password.errors?.required">
+								Password required
+							</div>						
+							<div *ngIf="loginForm.controls.password.errors?.minlength">
+								Password should at least {{ loginForm.controls.password.errors.minlength.requiredLength }} characters.
+							</div>
+						</div>
 						<input type="password" 
 							class="form-control input-underline input-lg" 
 							id="" placeholder="Password"
 							formControlName="password">
 					</div>
 				</div>
-				<button type="submit" class="btn rounded-btn"> Log in </button>
-				<!--<a type="submit" class="btn rounded-btn" routerLink="/dashboard/home"> Log in </a>				-->
+				<button 
+					type="submit" 
+					class="btn rounded-btn"
+					[disabled]="!loginForm.valid"
+					> 
+					Log in 
+				</button>
 				&nbsp;
 				<a class="btn rounded-btn" routerLink="/signup">Register</a>
 			</form>

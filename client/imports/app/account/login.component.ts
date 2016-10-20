@@ -1,7 +1,9 @@
 import { Component , OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Meteor } from 'meteor/meteor';
+import { Router } from '@angular/router';
 
+import { EmailValidator } from './email.validator';
 import template from './login.component.html';
 
 @Component({
@@ -14,14 +16,22 @@ export class LoginComponent implements OnInit {
 	loginForm: FormGroup;
 	
 	constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+		private router: Router
   ) {}
 
 	ngOnInit() {
 		// TODO: email validation
 		this.loginForm = this.formBuilder.group({
-			email: ['', Validators.required],
-			password: ['', Validators.required]
+			email: ['',
+				Validators.compose([
+					Validators.required,
+					EmailValidator.validFormat
+				]) 				
+			],
+			password: ['', 
+				[Validators.required, Validators.minLength(5)]
+			]
 		})
 	}
 
@@ -35,6 +45,7 @@ export class LoginComponent implements OnInit {
 					alert(error);
 				} else {
 					alert('login success');
+					this.router.navigate( ['/dashboard/home'] );
 				}
 			})
 		}
