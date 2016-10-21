@@ -22,8 +22,7 @@ export class LoginComponent implements OnInit {
 		private router: Router
   ) {}
 
-	ngOnInit() {
-		// TODO: email validation
+	ngOnInit() {		
 		this.loginForm = this.formBuilder.group({
 			email: ['',
 				Validators.compose([
@@ -34,19 +33,25 @@ export class LoginComponent implements OnInit {
 			password: ['', 
 				[Validators.required, Validators.minLength(5)]
 			]
-		})
+		});
+
+		// Meteor.user() maybe undefined
+		if ( Meteor.userId() ) {
+			// logged-in already, navigate to dashboard/home
+			this.router.navigate( ['/dashboard/home'] );
+			return;
+		}
 	}
 
 	login() {
-		if ( this.loginForm.valid ) {
-			console.log(this.loginForm.value)
+		if ( this.loginForm.valid ) {			
 			Meteor.loginWithPassword(this.loginForm.value.email, 
 				this.loginForm.value.password,
 				(error) => {
 				if ( error ) {
 					alert(error);
 				} else {
-					alert('login success');
+					alert('login success');					
 					this.router.navigate( ['/dashboard/home'] );
 				}
 			})

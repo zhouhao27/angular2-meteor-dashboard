@@ -10,8 +10,7 @@
     "@types/chai": "^3.4.33",
     "@types/mocha": "^2.2.32",
     "chai": "3.5.0",
-    "chai-spies": "0.7.1",
-    "typescript": "^2.0.3"
+    "chai-spies": "0.7.1"
   },
   "dependencies": {
     "@angular/common": "2.1.0",

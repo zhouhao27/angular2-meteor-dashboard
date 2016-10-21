@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Meteor } from 'meteor/meteor';
+import { Router } from '@angular/router';
+
 import template from './topnav.component.html';
 
 declare var $:any;
@@ -10,6 +13,8 @@ declare var $:any;
 })
 
 export class TopNavComponent {
+	constructor(private router: Router) {}
+
 	changeTheme(color: string): void {
 		var link: any = $('<link>');
 		link
@@ -28,5 +33,12 @@ export class TopNavComponent {
 		var mainContainer: any = $('.main-container');
 		sidebar.toggleClass('sidebar-left-zero');
 		mainContainer.toggleClass('main-container-ml-zero');
+	}
+
+	logout(): void {
+		// TODO: prompt
+		Meteor.logout( () => {
+			this.router.navigate( ['/'] );
+		});		
 	}
 }

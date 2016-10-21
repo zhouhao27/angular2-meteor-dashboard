@@ -19,8 +19,6 @@ export class RegisterComponent implements OnInit {
 
 	constructor(private formBuilder: FormBuilder) {}
 
-	// TODO: email validate, repeat has to be the same as password,
-	// style
 	ngOnInit() {
 		this.registerForm = this.formBuilder.group({
 			name: ['',
@@ -39,7 +37,7 @@ export class RegisterComponent implements OnInit {
 	register() {
 		if ( this.registerForm.valid ) {
 			let credentials = {
-				name: this.registerForm.value['name'], 
+				username: this.registerForm.value['name'], 
 				email: this.registerForm.value['email'],
         password: this.registerForm.value['password'] 
 			}
@@ -49,6 +47,8 @@ export class RegisterComponent implements OnInit {
           alert(error);
         }
         else {
+					console.log(Meteor.user())
+					// TODO: login
           alert("User created");
         }
       });
