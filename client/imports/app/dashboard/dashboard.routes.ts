@@ -1,6 +1,6 @@
 import { Route } from '@angular/router';
-import { DashboardComponent } from './dashboard.component';
 
+import { DashboardComponent } from './dashboard.component';
 import { CHART_ROUTES } from './charts/chart.routes';
 import { HOME_ROUTES } from './home/home.route';
 import { BLANKPAGE_ROUTES } from './blank-page/blank-page.routes';
@@ -9,11 +9,14 @@ import { TABLE_ROUTES } from './tables/table.routes';
 import { GRID_ROUTES } from './grid/grid.routes';
 import { ELEMENT_ROUTES } from './element/element.routes';
 import { COMPONENT_ROUTES } from './component/component.routes';
+import { CanActivateGuard } from '../activate-guard';
 
 export const DASHBOARD_ROUTES: Route[] = [
   { 
     path: 'dashboard',
     component: DashboardComponent,
+    canActivate: [CanActivateGuard],
+    // canActivate: ['canActivateForLoggedIn'],    
     children: [
 			...HOME_ROUTES,
       ...CHART_ROUTES,

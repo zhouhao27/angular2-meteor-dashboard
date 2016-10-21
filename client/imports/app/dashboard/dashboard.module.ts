@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
+// import { ROUTES_PROVIDERS } from '../app.routes';
+import { CanActivateGuard } from '../activate-guard';
 import { DashboardComponent } from './dashboard.component';
 import { HomeModule } from './home';
 import { MyChartModule } from './charts/chart.module';
@@ -26,6 +28,10 @@ import { ComponentModule } from './component/component.module'
     GridModule,
     ElementModule,
     ComponentModule
+  ],
+  providers: [
+    CanActivateGuard
+    // ...ROUTES_PROVIDERS
   ],
   declarations: [
     DashboardComponent    
